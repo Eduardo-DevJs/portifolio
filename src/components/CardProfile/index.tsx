@@ -1,6 +1,7 @@
 import { FaRegCopy, FaWhatsapp } from "react-icons/fa";
 import { FiFacebook, FiGithub, FiLinkedin } from "react-icons/fi";
 import { useTheme } from "../../Contexts/ThemeContext";
+import PhotoProfile from "../../assets/profile-removebg-preview.png";
 
 export default function CardProfile() {
   const { theme } = useTheme();
@@ -22,8 +23,14 @@ export default function CardProfile() {
         <div
           className={`${
             theme === "light" ? "bg-zinc-200 " : "bg-slate-800"
-          } w-full h-[260px] rounded`}
-        ></div>
+          } w-full h-[250px] rounded`}
+        >
+          <img
+            src={PhotoProfile}
+            className="h-[250px] w-full object-cover"
+            alt=""
+          />
+        </div>
         <h1 className="font-bold text-2xl text-slate-500">
           Eduardo de Oliveira 🚀
         </h1>
@@ -36,7 +43,12 @@ export default function CardProfile() {
         <div className="flex items-center gap-2">
           <button className="p-4 flex items-center gap-4 bg-green-600 rounded font-bold text-white">
             <FaWhatsapp size={24} />
-            <span>WhatsApp</span>
+            <a
+              target="_blank"
+              href="https://api.whatsapp.com/send?phone=27988810106&text=Olá, estou interessado em seus serviços."
+            >
+              WhatsApp
+            </a>
           </button>
           <button
             onClick={handleCopyEmail}
