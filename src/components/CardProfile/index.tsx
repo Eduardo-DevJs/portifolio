@@ -18,8 +18,8 @@ export default function CardProfile() {
   const isChangedTheme = theme === "light" ? "bg-white" : "bg-slate-900";
 
   return (
-    <aside className={`${isChangedTheme} shadow p-5 rounded`}>
-      <div className="space-y-4">
+    <aside className={`${isChangedTheme} col-span-2 md:col-span-1 shadow p-5 rounded`}>
+      <div className="space-y-5">
         <div
           className={`${
             theme === "light" ? "bg-zinc-200 " : "bg-slate-800"
@@ -35,10 +35,9 @@ export default function CardProfile() {
           Eduardo de Oliveira 🚀
         </h1>
         <p className="text-slate-500 leading-8 font-semibold">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-          aliquam illum expedita quas sint! Reprehenderit, quae! Alias, ipsa.
-          Odio mollitia odit doloribus cupiditate dolorum, in qui neque
-          exercitationem debitis repudiandae?
+          Desenvolvedor Frontend, recém formado em desenvolvimento de sistemas
+          pela SENAI no estado do Espirito Santo. Apaixonado por técnologias
+          e por ensinar! 👨‍💻
         </p>
         <div className="flex items-center gap-2">
           <button className="p-4 flex items-center gap-4 bg-green-600 rounded font-bold text-white">

@@ -3,6 +3,7 @@ import Container from "../Container";
 import { GrProjects } from "react-icons/gr";
 import { useTheme } from "../../Contexts/ThemeContext";
 import { MdDarkMode, MdSunny } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
@@ -28,17 +29,29 @@ export default function Header() {
                 theme === "light" ? "text-slate-950" : "text-white"
               }`}
             >
-              <li className="flex items-center gap-2 p-2 hover:transition-colors">
+              <li className="flex items-center gap-2 md:px-5 md:py-2 p-2 hover:transition-colors  cursor-pointer">
                 <FiHome size={20} />
-                <span className="font-semibold md:text-xl text-xs">Home</span>
+                <Link to={"/"} className="font-semibold md:text-xl text-xs">
+                  Home
+                </Link>
               </li>
-              <li className="flex items-center gap-2 p-2 hover:transition-colors">
+              <li className="flex items-center gap-2 md:px-5 md:py-2 p-2 hover:transition-colors  cursor-pointer">
                 <FiUser size={20} />
-                <span className="font-semibold md:text-xl text-xs">Sobre</span>
+                <Link
+                  to={"/about"}
+                  className="font-semibold md:text-xl text-xs"
+                >
+                  Sobre
+                </Link>
               </li>
-              <li className="flex items-center gap-2 p-2 hover:transition-colors">
+              <li className="flex items-center gap-2 md:px-5 md:py-2 hover:transition-colors  cursor-pointer">
                 <GrProjects size={20} />
-                <span className="font-semibold md:text-xl text-xs">Projetos</span>
+                <Link
+                  to={"/projects"}
+                  className="font-semibold md:text-xl text-xs"
+                >
+                  Projetos
+                </Link>
               </li>
               <li>
                 {theme === "light" ? (

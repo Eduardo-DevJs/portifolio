@@ -3,6 +3,7 @@ import ListOfLanguagens from "../ListsLanguagens";
 import TitleCard from "../TitleCard";
 import ProjectKanban from "../../assets/projectKanban.png";
 import ProjectWebCar from "../../assets/projectWebCar.png";
+import { Link } from "react-router-dom";
 
 export default function Card() {
   const { theme } = useTheme();
@@ -37,28 +38,35 @@ export default function Card() {
       >
         <header>
           <TitleCard>Projetos Recentes:</TitleCard>
-          <a href="#" className="underline text-slate-500">
-            Ver todos os projetos
-          </a>
+          <Link to={"/projects"} className="underline text-slate-500">
+            Ver mais projetos
+          </Link>
         </header>
         <div className="flex flex-col gap-10 mt-4">
           <div className="space-y-3">
-            <img
-              src={ProjectKanban}
-              alt="Projeto kanban"
-              className="rounded-md"
-            />
+            <a
+              target="_blank"
+              href="https://kanban-board-topaz-six.vercel.app/"
+            >
+              <img
+                src={ProjectKanban}
+                alt="Projeto kanban"
+                className="rounded-md hover:opacity-70"
+              />
+            </a>
             <p className="leading-normal font-normal text-slate-500">
               HTML / CSS / JAVASCRIPT - Projeto com WebApi do Javascript drag
               and drop (arrasta e solta)
             </p>
           </div>
           <div className="space-y-3">
-            <img
-              src={ProjectWebCar}
-              alt="Projeto WebCar"
-              className="rounded-md"
-            />
+            <a target="_blank" href="https://web-carros-neon.vercel.app/">
+              <img
+                src={ProjectWebCar}
+                alt="Projeto WebCar"
+                className="rounded-md hover:opacity-70"
+              />
+            </a>
             <p className="leading-normal font-normal text-slate-500">
               REACT / TYPESCRIPT / FIREBASE / TAILWIND - Projeto completo com
               cadastro e leitura de dados, baseado no site da web motors
