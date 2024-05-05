@@ -8,7 +8,7 @@ import thumbImc from "../../assets/webIMC.png";
 import { IoLogoJavascript } from "react-icons/io";
 import { IoLogoFirebase } from "react-icons/io5";
 import { SiTypescript } from "react-icons/si";
-import { FaCss3, FaHtml5, FaReact } from "react-icons/fa";
+import { FaCss3, FaReact } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { useTheme } from "../../Contexts/ThemeContext";
 
