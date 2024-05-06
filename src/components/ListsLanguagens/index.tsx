@@ -17,7 +17,7 @@ export default function ListOfLanguagens() {
         </li>
         <li className="flex items-center flex-col gap-2">
           <IoLogoJavascript size={80} color="#ddce25" />
-          <p className="font-semibold text-xl text-slate-500">Javascritp</p>
+          <p className="font-semibold text-xl text-slate-500">JavaScript</p>
         </li>
         <li className="flex items-center flex-col gap-2">
           <FaReact size={80} color="#1fb2e2" />
