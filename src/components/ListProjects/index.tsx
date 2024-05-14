@@ -4,12 +4,15 @@ import thumbNotas from "../../assets/webNotas.png";
 import thumbPhotoPickerColor from "../../assets/webPhotoPickerColor.png";
 import thumbCountries from "../../assets/webPaises.png";
 import thumbArcodeon from "../../assets/webArcodeon.png";
+import thumbDalyGames from "../../assets/dalygames.png";
+import thumbMiniPortifolio from "../../assets/miniportifolio.png";
 import thumbImc from "../../assets/webIMC.png";
+import thumbCards from "../../assets/cards.png";
 import { IoLogoJavascript } from "react-icons/io";
 import { IoLogoFirebase } from "react-icons/io5";
 import { SiTypescript } from "react-icons/si";
-import { FaCss3, FaReact } from "react-icons/fa";
-import { RiTailwindCssFill } from "react-icons/ri";
+import { FaCss3, FaHtml5, FaReact } from "react-icons/fa";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { useTheme } from "../../Contexts/ThemeContext";
 
 export default function ListProjects() {
@@ -151,6 +154,73 @@ export default function ListProjects() {
             <IoLogoJavascript size={40} color="#ddda0a" />
             <FaReact size={40} color="#1fb2e2" />
             <RiTailwindCssFill size={40} color="#075670" />
+          </div>
+        </li>
+        <li
+          className={`${isChangedTheme} rounded-md  flex flex-col items-center justify-between  p-5 space-y-5`}
+        >
+          <a
+            className="hover:opacity-70"
+            href="https://dalygames-eta.vercel.app/"
+            target="_blank"
+          >
+            <img
+              src={thumbDalyGames}
+              className="rounded-md object-cover"
+              alt="Primeiro projeto"
+            />
+          </a>
+          <h2 className="text-slate-500 font-bold text-2xl text-center">
+            DalyGames
+          </h2>
+          <div className="flex items-center justify-around w-full">
+            <RiNextjsFill size={40} color="#000" />
+            <FaReact size={40} color="#1fb2e2" />
+            <RiTailwindCssFill size={40} color="#075670" />
+          </div>
+        </li>
+        <li
+          className={`${isChangedTheme} rounded-md flex flex-col items-center justify-between  p-5 space-y-5`}
+        >
+          <a
+            className="hover:opacity-70"
+            href="https://eduardo-devjs.github.io/Mini-portifolio/"
+            target="_blank"
+          >
+            <img
+              src={thumbMiniPortifolio}
+              className="rounded-md object-cover"
+              alt="Primeiro projeto"
+            />
+          </a>
+          <h2 className="text-slate-500 font-bold text-2xl text-center">
+            Mini Portifolio
+          </h2>
+          <div className="flex items-center justify-center gap-10 w-full">
+            <FaHtml5 size={40} color="#f8af10" />
+            <FaCss3 size={40} color="#1fb2e2" />
+          </div>
+        </li>
+        <li
+          className={`${isChangedTheme} rounded-md flex flex-col items-center justify-between  p-5 space-y-5`}
+        >
+          <a
+            className="hover:opacity-70"
+            href="https://eduardo-devjs.github.io/Planos/"
+            target="_blank"
+          >
+            <img
+              src={thumbCards}
+              className="rounded-md object-cover"
+              alt="Primeiro projeto"
+            />
+          </a>
+          <h2 className="text-slate-500 font-bold text-2xl text-center">
+            Card preços
+          </h2>
+          <div className="flex items-center justify-center gap-10 w-full">
+            <FaHtml5 size={40} color="#f8af10" />
+            <FaCss3 size={40} color="#1fb2e2" />
           </div>
         </li>
       </ul>
