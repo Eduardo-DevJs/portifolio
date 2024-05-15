@@ -174,7 +174,8 @@ export default function ListProjects() {
             DalyGames
           </h2>
           <div className="flex items-center justify-around w-full">
-            <RiNextjsFill size={40} color="#000" />
+            <RiNextjsFill size={40} color="#64748B" />
+            <SiTypescript size={40} color="#0988af" />
             <FaReact size={40} color="#1fb2e2" />
             <RiTailwindCssFill size={40} color="#075670" />
           </div>

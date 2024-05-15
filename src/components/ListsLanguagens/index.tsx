@@ -33,7 +33,7 @@ export default function ListOfLanguagens() {
           <p className="font-semibold text-xl text-slate-500">Typescript</p>
         </li>
         <li className="flex items-center flex-col gap-2">
-          <RiNextjsFill size={40} color="#000" />
+          <RiNextjsFill size={40} color="#64748B" />
           <p className="font-semibold text-xl text-slate-500">NextJs</p>
         </li>
       </ul>
