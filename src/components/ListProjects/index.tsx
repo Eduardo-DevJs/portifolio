@@ -7,6 +7,7 @@ import thumbArcodeon from "../../assets/webArcodeon.png";
 import thumbDalyGames from "../../assets/dalygames.png";
 import thumbMiniPortifolio from "../../assets/miniportifolio.png";
 import thumbImc from "../../assets/webIMC.png";
+import thumbFlex from "../../assets/flex.png";
 import thumbCards from "../../assets/cards.png";
 import { IoLogoJavascript } from "react-icons/io";
 import { IoLogoFirebase } from "react-icons/io5";
@@ -223,6 +224,31 @@ export default function ListProjects() {
             <FaHtml5 size={40} color="#f8af10" />
             <FaCss3 size={40} color="#1fb2e2" />
           </div>
+        </li>
+        <li
+          className={`${isChangedTheme} rounded-md flex flex-col items-center justify-between  p-5 space-y-5`}
+        >
+          <a
+            className="hover:opacity-70"
+            href="https://flex-justify.vercel.app/"
+            target="_blank"
+          >
+            <img
+              src={thumbFlex}
+              className="rounded-md object-cover"
+              alt="Primeiro projeto"
+            />
+          </a>
+          <h2 className="text-slate-500 font-bold text-2xl text-center">
+            Propriedades Flex
+          </h2>
+          <div className="flex items-center justify-center gap-10 w-full">
+            <FaReact size={40} color="#1fb2e2" />
+            <RiTailwindCssFill size={40} color="#075670" />
+          </div>
+        </li>
+        <li className={`${isChangedTheme} rounded-md flex justify-center items-center  p-5 space-y-5`}>
+          <h1 className="font-bold text-3xl text-gray-600">+ Projetos em breve</h1>
         </li>
       </ul>
     </Container>
