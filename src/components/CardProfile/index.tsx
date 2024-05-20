@@ -34,7 +34,7 @@ export default function CardProfile() {
           />
         </div>
         <h1 className="font-bold text-2xl text-slate-500">
-          Eduardo de Oliveira 🚀
+          Eduardo de Oliveira (PCD) 🚀 
         </h1>
         <p className="text-slate-500 leading-8 font-semibold">
           Desenvolvedor Frontend, recém formado em desenvolvimento de sistemas

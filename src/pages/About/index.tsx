@@ -1,5 +1,5 @@
 import Container from "../../components/Container";
-import curriculo from "../../assets/MinimalistaNeutro.pdf";
+import curriculo from "../../assets/Curriculo Eduardo de Oliveira.pdf";
 import { FaDownload } from "react-icons/fa";
 import Input from "../../components/Input";
 import TextArea from "../../components/textarea";
