@@ -1,7 +1,7 @@
 import { FaRegCopy, FaWhatsapp } from "react-icons/fa";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { useTheme } from "../../Contexts/ThemeContext";
-import PhotoProfile from "../../assets/profile-removebg-preview.png";
+import PhotoProfile from "../../../public/profile-removebg-preview.png";
 
 export default function CardProfile() {
   const { theme } = useTheme();

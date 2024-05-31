@@ -1,254 +1,48 @@
 import Container from "../../components/Container";
-import thumbComentarios from "../../assets/webComentarios.png";
-import thumbNotas from "../../assets/webNotas.png";
-import thumbPhotoPickerColor from "../../assets/webPhotoPickerColor.png";
-import thumbCountries from "../../assets/webPaises.png";
-import thumbArcodeon from "../../assets/webArcodeon.png";
-import thumbDalyGames from "../../assets/dalygames.png";
-import thumbMiniPortifolio from "../../assets/miniportifolio.png";
-import thumbImc from "../../assets/webIMC.png";
-import thumbFlex from "../../assets/flex.png";
-import thumbCards from "../../assets/cards.png";
 import { IoLogoJavascript } from "react-icons/io";
 import { IoLogoFirebase } from "react-icons/io5";
 import { SiTypescript } from "react-icons/si";
 import { FaCss3, FaHtml5, FaReact } from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { useTheme } from "../../Contexts/ThemeContext";
+import { projects } from "../../data/projects";
+import Project from "../ItemProject";
 
 export default function ListProjects() {
   const { theme } = useTheme();
+
+  const iconComponents: any = {
+    javascript: <IoLogoJavascript size={40} color="#F7DF1E" />,
+    firebase: <IoLogoFirebase size={40} color="#FFCA28" />,
+    typescript: <SiTypescript size={40} color="#007ACC" />,
+    css: <FaCss3 size={40} color="#1572B6" />,
+    html: <FaHtml5 size={40} color="#E34F26" />,
+    react: <FaReact size={40} color="#61DAFB" />,
+    nextjs: <RiNextjsFill size={40} color="#000000" />,
+    tailwind: <RiTailwindCssFill size={40} color="#38B2AC" />,
+  };
+
   const isChangedTheme = theme === "light" ? "bg-white" : "bg-slate-900";
   return (
     <Container>
       <ul className="grid gap-5 md:grid-cols-3">
+        {projects.map((item, index) => (
+          <Project
+            key={index}
+            link={item.link}
+            thumb={item.thumb}
+            title={item.title}
+            className={`${isChangedTheme}`}
+            alt={item.title}
+            languages={item.languages.map((lang) => iconComponents[lang])}
+          />
+        ))}
         <li
-          className={`${isChangedTheme} rounded-md flex flex-col justify-between items-center p-5 space-y-5`}
+          className={`${isChangedTheme} rounded-md flex justify-center items-center  p-5 space-y-5`}
         >
-          <a
-            className="hover:opacity-70"
-            href="https://comentarios-chi.vercel.app/"
-            target="_blank"
-          >
-            <img
-              src={thumbComentarios}
-              className="rounded-md"
-              alt="Primeiro projeto"
-            />
-          </a>
-          <h2 className="text-slate-500 font-bold text-2xl text-center">
-            Sistema de comentarios
-          </h2>
-          <div className="flex items-center justify-around w-full">
-            <IoLogoFirebase size={40} color="#918614" />
-            <SiTypescript size={40} color="#0988af" />
-            <FaReact size={40} color="#1fb2e2" />
-            <RiTailwindCssFill size={40} color="#075670" />
-          </div>
-        </li>
-        <li
-          className={`${isChangedTheme} rounded-md flex flex-col justify-between  items-center p-5 space-y-5`}
-        >
-          <a
-            className="hover:opacity-70"
-            href="https://nlw-expert-notes-peach.vercel.app/"
-            target="_blank"
-          >
-            <img
-              src={thumbNotas}
-              className="rounded-md"
-              alt="Primeiro projeto"
-            />
-          </a>
-          <h2 className="text-slate-500 font-bold text-2xl text-center">
-            Sistema de notas com gravador
-          </h2>
-          <div className="flex items-center justify-around w-full">
-            <SiTypescript size={40} color="#0988af" />
-            <FaReact size={40} color="#1fb2e2" />
-            <RiTailwindCssFill size={40} color="#075670" />
-          </div>
-        </li>
-        <li
-          className={`${isChangedTheme} rounded-md flex flex-col items-center justify-between  p-5 space-y-5`}
-        >
-          <a
-            className="hover:opacity-70"
-            href="https://picker-photo-color.vercel.app/"
-            target="_blank"
-          >
-            <img
-              src={thumbPhotoPickerColor}
-              className="rounded-md"
-              alt="Primeiro projeto"
-            />
-          </a>
-          <h2 className="text-slate-500 font-bold text-2xl text-center">
-            Conta gotas de fotos
-          </h2>
-          <div className="flex items-center justify-around w-full">
-            <IoLogoJavascript size={40} color="#ddda0a" />
-            <FaReact size={40} color="#1fb2e2" />
-            <RiTailwindCssFill size={40} color="#075670" />
-          </div>
-        </li>
-        <li
-          className={`${isChangedTheme} rounded-md flex flex-col items-center justify-between  p-5 space-y-5`}
-        >
-          <a
-            className="hover:opacity-70"
-            href="https://calculadora-imc-pi-eight.vercel.app/"
-            target="_blank"
-          >
-            <img src={thumbImc} className="rounded-md" alt="Primeiro projeto" />
-          </a>
-          <h2 className="text-slate-500 font-bold text-2xl text-center">
-            Calculadora de IMC
-          </h2>
-          <div className="flex items-center justify-around w-full">
-            <IoLogoJavascript size={40} color="#ddda0a" />
-            <FaReact size={40} color="#1fb2e2" />
-            <FaCss3 size={40} color="#1fb2e2" />
-          </div>
-        </li>
-        <li
-          className={`${isChangedTheme} rounded-md flex flex-col items-center justify-between  p-5 space-y-5`}
-        >
-          <a
-            className="hover:opacity-70"
-            href="https://rest-coutries-ebon.vercel.app/"
-            target="_blank"
-          >
-            <img
-              src={thumbCountries}
-              className="rounded-md object-cover"
-              alt="Primeiro projeto"
-            />
-          </a>
-          <h2 className="text-slate-500 font-bold text-2xl text-center">
-            Rest Countries
-          </h2>
-          <div className="flex items-center justify-around w-full">
-            <IoLogoJavascript size={40} color="#ddda0a" />
-            <FaReact size={40} color="#1fb2e2" />
-            <RiTailwindCssFill size={40} color="#075670" />
-          </div>
-        </li>
-        <li
-          className={`${isChangedTheme} rounded-md flex flex-col items-center justify-between  p-5 space-y-5`}
-        >
-          <a
-            className="hover:opacity-70"
-            href="https://arcodeon.vercel.app/"
-            target="_blank"
-          >
-            <img
-              src={thumbArcodeon}
-              className="rounded-md object-cover"
-              alt="Primeiro projeto"
-            />
-          </a>
-          <h2 className="text-slate-500 font-bold text-2xl text-center">
-            Arcodeon
-          </h2>
-          <div className="flex items-center justify-around w-full">
-            <IoLogoJavascript size={40} color="#ddda0a" />
-            <FaReact size={40} color="#1fb2e2" />
-            <RiTailwindCssFill size={40} color="#075670" />
-          </div>
-        </li>
-        <li
-          className={`${isChangedTheme} rounded-md  flex flex-col items-center justify-between  p-5 space-y-5`}
-        >
-          <a
-            className="hover:opacity-70"
-            href="https://dalygames-eta.vercel.app/"
-            target="_blank"
-          >
-            <img
-              src={thumbDalyGames}
-              className="rounded-md object-cover"
-              alt="Primeiro projeto"
-            />
-          </a>
-          <h2 className="text-slate-500 font-bold text-2xl text-center">
-            DalyGames
-          </h2>
-          <div className="flex items-center justify-around w-full">
-            <RiNextjsFill size={40} color="#64748B" />
-            <SiTypescript size={40} color="#0988af" />
-            <FaReact size={40} color="#1fb2e2" />
-            <RiTailwindCssFill size={40} color="#075670" />
-          </div>
-        </li>
-        <li
-          className={`${isChangedTheme} rounded-md flex flex-col items-center justify-between  p-5 space-y-5`}
-        >
-          <a
-            className="hover:opacity-70"
-            href="https://eduardo-devjs.github.io/Mini-portifolio/"
-            target="_blank"
-          >
-            <img
-              src={thumbMiniPortifolio}
-              className="rounded-md object-cover"
-              alt="Primeiro projeto"
-            />
-          </a>
-          <h2 className="text-slate-500 font-bold text-2xl text-center">
-            Mini Portifolio
-          </h2>
-          <div className="flex items-center justify-center gap-10 w-full">
-            <FaHtml5 size={40} color="#f8af10" />
-            <FaCss3 size={40} color="#1fb2e2" />
-          </div>
-        </li>
-        <li
-          className={`${isChangedTheme} rounded-md flex flex-col items-center justify-between  p-5 space-y-5`}
-        >
-          <a
-            className="hover:opacity-70"
-            href="https://eduardo-devjs.github.io/Planos/"
-            target="_blank"
-          >
-            <img
-              src={thumbCards}
-              className="rounded-md object-cover"
-              alt="Primeiro projeto"
-            />
-          </a>
-          <h2 className="text-slate-500 font-bold text-2xl text-center">
-            Card preços
-          </h2>
-          <div className="flex items-center justify-center gap-10 w-full">
-            <FaHtml5 size={40} color="#f8af10" />
-            <FaCss3 size={40} color="#1fb2e2" />
-          </div>
-        </li>
-        <li
-          className={`${isChangedTheme} rounded-md flex flex-col items-center justify-between  p-5 space-y-5`}
-        >
-          <a
-            className="hover:opacity-70"
-            href="https://flex-justify.vercel.app/"
-            target="_blank"
-          >
-            <img
-              src={thumbFlex}
-              className="rounded-md object-cover"
-              alt="Primeiro projeto"
-            />
-          </a>
-          <h2 className="text-slate-500 font-bold text-2xl text-center">
-            Propriedades Flex
-          </h2>
-          <div className="flex items-center justify-center gap-10 w-full">
-            <FaReact size={40} color="#1fb2e2" />
-            <RiTailwindCssFill size={40} color="#075670" />
-          </div>
-        </li>
-        <li className={`${isChangedTheme} rounded-md flex justify-center items-center  p-5 space-y-5`}>
-          <h1 className="font-bold text-3xl text-gray-600">+ Projetos em breve</h1>
+          <h1 className="font-bold text-3xl text-gray-600">
+            + Projetos em breve
+          </h1>
         </li>
       </ul>
     </Container>

@@ -1,8 +1,8 @@
 import { useTheme } from "../../Contexts/ThemeContext";
 import ListOfLanguagens from "../ListsLanguagens";
 import TitleCard from "../TitleCard";
-import ProjectKanban from "../../assets/projectKanban.png";
-import ProjectWebCar from "../../assets/projectWebCar.png";
+import ProjectKanban from "../../../public/projectKanban.png";
+import ProjectWebCar from "../../../public/projectWebCar.png";
 import { Link } from "react-router-dom";
 
 export default function Card() {
