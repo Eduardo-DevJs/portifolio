@@ -40,7 +40,7 @@ export const projects: ProjectsProps[] = [
   {
     title: "DalyGames",
     link: "https://dalygames-eta.vercel.app/",
-    thumb: "/webArcodeon.png",
+    thumb: "/dalygames.png",
     languages: ['nextjs','react','tailwind','typescript'],
   },
   {
