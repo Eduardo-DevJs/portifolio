@@ -67,4 +67,22 @@ export const projects: ProjectsProps[] = [
     thumb: "/webPizzas.png",
     languages: ['react','tailwind', 'typescript'],
   },
+  {
+    title: "Dev Motors",
+    link: "https://devmotors-snowy.vercel.app/",
+    thumb: "/webDevMotors.png",
+    languages: ['react','nextjs', 'typescript', 'sass'],
+  },
+  {
+    title: "Contador de Palavras",
+    link: "https://counter-words-characters.vercel.app/",
+    thumb: "/webContadorPalavras.png",
+    languages: ['react', 'tailwind','typescript'],
+  },
+  {
+    title: "Calculo de desconto",
+    link: "https://counter-words-characters.vercel.app/",
+    thumb: "/webDesconto.png",
+    languages: ['react', "javascript", 'tailwind'],
+  },
 ];

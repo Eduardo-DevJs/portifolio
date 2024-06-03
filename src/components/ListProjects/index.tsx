@@ -2,7 +2,7 @@ import Container from "../../components/Container";
 import { IoLogoJavascript } from "react-icons/io";
 import { IoLogoFirebase } from "react-icons/io5";
 import { SiTypescript } from "react-icons/si";
-import { FaCss3, FaHtml5, FaReact } from "react-icons/fa";
+import { FaCss3, FaHtml5, FaReact, FaSass } from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { useTheme } from "../../Contexts/ThemeContext";
 import { projects } from "../../data/projects";
@@ -20,6 +20,7 @@ export default function ListProjects() {
     react: <FaReact size={40} color="#61DAFB" />,
     nextjs: <RiNextjsFill size={40} color="#000000" />,
     tailwind: <RiTailwindCssFill size={40} color="#38B2AC" />,
+    sass: <FaSass  size={40} color="#cc10ad" />,
   };
 
   const isChangedTheme = theme === "light" ? "bg-white" : "bg-slate-900";
