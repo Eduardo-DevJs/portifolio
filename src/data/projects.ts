@@ -68,7 +68,7 @@ export const projects: ProjectsProps[] = [
     languages: ['react','tailwind', 'typescript'],
   },
   {
-    title: "Dev Motors",
+    title: "Dev Motors (CMS)",
     link: "https://devmotors-snowy.vercel.app/",
     thumb: "/webDevMotors.png",
     languages: ['react','nextjs', 'typescript', 'sass'],
