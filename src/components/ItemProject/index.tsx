@@ -5,11 +5,12 @@ export default function Project({
   alt,
   title,
   link,
+  gitHub,
   languages,
 }: ProjectsProps) {
   return (
     <li
-      className={`${className} rounded-md flex flex-col justify-around items-center p-5 space-y-5`}
+      className={`${className} rounded-md flex flex-col justify-around items-center p-5 space-y-6`}
     >
       <a className="hover:opacity-70" href={link} target="_blank">
         <img src={thumb} className="rounded-md" alt={alt} />
@@ -18,13 +19,22 @@ export default function Project({
       <div className="flex items-center gap-10 justify-center w-full">
         {languages}
       </div>
-      <a
-        href={link}
-        target="_blank"
-        className="bg-sky-600 hover:bg-sky-500 transition-colors p-2 text-xl rounded-md w-full text-center text-white font-bold"
-      >
-        Acessar
-      </a>
+      <div className="flex items-center w-full gap-1">
+        <a
+          href={link}
+          target="_blank"
+          className="bg-sky-600 hover:bg-sky-500 transition-colors p-2 text-xl rounded-md w-full text-center text-white font-bold"
+        >
+          Acessar
+        </a>
+        <a
+          href={gitHub}
+          target="_blank"
+          className="underline text-xl p-2 rounded-md w-full text-center text-slate-500 font-bold"
+        >
+          Código Fonte
+        </a>
+      </div>
     </li>
   );
 }

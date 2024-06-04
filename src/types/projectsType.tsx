@@ -3,6 +3,7 @@ export interface ProjectsProps {
     className?: string;
     thumb: string;
     link: string;
+    gitHub?: string
     alt?: string;
     languages: string[];
 }

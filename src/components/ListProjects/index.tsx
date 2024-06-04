@@ -18,7 +18,7 @@ export default function ListProjects() {
     css: <FaCss3 size={40} color="#1572B6" />,
     html: <FaHtml5 size={40} color="#E34F26" />,
     react: <FaReact size={40} color="#61DAFB" />,
-    nextjs: <RiNextjsFill size={40} color="#000000" />,
+    nextjs: <RiNextjsFill size={40} color="#748BA7" />,
     tailwind: <RiTailwindCssFill size={40} color="#38B2AC" />,
     sass: <FaSass  size={40} color="#cc10ad" />,
   };
@@ -29,6 +29,7 @@ export default function ListProjects() {
       <ul className="grid gap-5 md:grid-cols-3">
         {projects.map((item, index) => (
           <Project
+            gitHub={item.gitHub}
             key={index}
             link={item.link}
             thumb={item.thumb}
