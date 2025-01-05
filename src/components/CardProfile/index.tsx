@@ -37,9 +37,9 @@ export default function CardProfile() {
           Eduardo de Oliveira (PCD) 🚀 
         </h1>
         <p className="text-slate-500 leading-8 font-semibold">
-          Desenvolvedor Frontend, recém formado em desenvolvimento de sistemas
+          Desenvolvedor Frontend, formado em desenvolvimento de sistemas
           pela SENAI no estado do Espirito Santo. Apaixonado por técnologias e
-          por ensinar! 👨‍💻
+          por ensinar! Atualmente professor no senai. 👨‍💻
         </p>
         <div className="flex items-center gap-2">
           <button className="p-4 flex items-center gap-4 bg-green-600 rounded font-bold text-white">

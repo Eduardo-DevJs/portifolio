@@ -16,7 +16,7 @@ export default function About() {
             Sobre Mim
           </h1>
           <p className="text-slate-500 leading-10 font-semibold text-xs md:text-xl select-none">
-            Desenvolvedor Frontend, recém formado em desenvolvimento de sistemas
+            Desenvolvedor Frontend, formado em desenvolvimento de sistemas
             pela SENAI no estado do Espirito Santo. Apaixonado por técnologias e
             por ensinar! 👨‍💻. Atualmente tenho {currentAge} anos nascido e criado
             no estado do Espirito Santo. Morando na cidade de Cariacica. Sou

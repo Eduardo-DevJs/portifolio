@@ -30,6 +30,20 @@ export default function Card() {
             <p className="text-slate-500">Assistente administrativo</p>
           </div>
         </div>
+        <div className="flex items-center  gap-8">
+          <span className="text-slate-500">2024 - 2024</span>
+          <div>
+            <h2 className="font-bold text-slate-500">Fármacia Pague Menos </h2>
+            <p className="text-slate-500">Auxiliar de Loja</p>
+          </div>
+        </div>
+        <div className="flex items-center  gap-8">
+          <span className="text-slate-500">2024 - Atual</span>
+          <div>
+            <h2 className="font-bold text-slate-500">Findes </h2>
+            <p className="text-slate-500">Instrutor</p>
+          </div>
+        </div>
       </li>
       <li
         className={`${
@@ -37,7 +51,7 @@ export default function Card() {
         } rounded-md p-5 space-y-5 row-span-2`}
       >
         <header>
-          <TitleCard>Projetos Recentes:</TitleCard>
+          <TitleCard>Projetos:</TitleCard>
           <Link to={"/projects"} className="underline text-slate-500">
             Ver mais projetos
           </Link>
